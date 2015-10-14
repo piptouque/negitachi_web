@@ -103,7 +103,7 @@
   </script>
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
+<body data-spy="scroll" data-target="#navbar" data-offset="75">
 
 <!-- NAVIGATION BAR -->
 <nav id="navbar" class="navbar navbar-fixed-top navbar-default navbar-inverse">
@@ -130,7 +130,7 @@
         <li><a href="#concerts">Concerts</a></li>
         <li><a href="#videos">Vidéos</a></li>
         <li><a href="#photos">Photos</a></li>
-        <li><a href="" data-toggle="modal" data-target="#members">Membres</a></li>
+        <li><a href="#members">Membres</a></li>
         <li><a href="#contact">Nous contacter</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Réseaux<span class="caret"></span></a>
@@ -312,109 +312,113 @@
 </div>
 
 <!-- MODAL: MEMBERS -->
-<div id="members" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Membres 2015/2016</h4>
+<div id="members" class="pageEven" role="dialog">
+  <div class="container">
+    <div class="row-fluid PageHead">
+      <div class="col-md-12">
+        <h3>Membres</h3>
       </div>
-      <div class="modal-body">
-        <h4>Les membres chantants</h4>
-        <p>
-          <strong>Sopranos aux voix mélodieuses:</strong><br/>
-          <ul>
-            <li>Claire « Untitled » Margaria</li>
-            <li>Isabel Lopez</li>
-            <li>Julie Banse</li>
-            <li>Malika Papillon</li>
-            <li>Mélissa Barthélémy-Lecouturier</li>
-          </ul>
-          <strong>Alto (à Palo)</strong><br/>
-          <ul>
-            <li>Coraline Renault</li>
-            <li>Elise Caillet</li>
-            <li>Eve Jablon</li>
-            <li>Ingrid Levaisque</li>
-            <li>Pascale Méhalin</li>
-            <li>Valentine Hémery</li>
-          </ul>
-          <strong>Ténors (ou tu l’es pas)</strong><br/>
-          <ul>
-            <li>Benoît Vindevogel</li>
-            <li>Brian Lee</li>
-            <li>Dimitri Megherbi</li>
-            <li>Guilhem Rosa</li>
-            <li>Joseph De Bony</li>
-            <li>Vincent Le Ligeour</li>
-          </ul>
-          <strong>Basses qui chantent à voix haute</strong>
-          <ul>
-            <li>Arnaud Gompertz</li>
-            <li>Geoffrey Chéry</li>
-            <li>Joachim Jablon</li>
-            <li>Thien-Sinh Polodna</li>
-          </ul>
-          <strong>Beat box</strong>
-          <ul>
-            <li>Mériadec Lebas</li>
-          </ul>
-        </p>
+    </div>
+    <div class="row">
+      <h4>Les membres chantants</h4>
+      <div class="col-md-4">
+        <strong>Sopranos aux voix mélodieuses:</strong><br/>
+        <ul>
+          <li>Claire « Untitled » Margaria</li>
+          <li>Isabel Lopez</li>
+          <li>Julie Banse</li>
+          <li>Malika Papillon</li>
+          <li>Mélissa Barthélémy-Lecouturier</li>
+        </ul>
+        <strong>Alto (à Palo)</strong><br/>
+        <ul>
+          <li>Coraline Renault</li>
+          <li>Elise Caillet</li>
+          <li>Eve Jablon</li>
+          <li>Ingrid Levaisque</li>
+          <li>Pascale Méhalin</li>
+          <li>Valentine Hémery</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <strong>Ténors (ou tu l’es pas)</strong><br/>
+        <ul>
+          <li>Benoît Vindevogel</li>
+          <li>Brian Lee</li>
+          <li>Dimitri Megherbi</li>
+          <li>Guilhem Rosa</li>
+          <li>Joseph De Bony</li>
+          <li>Vincent Le Ligeour</li>
+        </ul>
+        <strong>Basses qui chantent à voix haute</strong>
+        <ul>
+          <li>Arnaud Gompertz</li>
+          <li>Geoffrey Chéry</li>
+          <li>Joachim Jablon</li>
+          <li>Thien-Sinh Polodna</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <strong>Beat box</strong>
+        <ul>
+          <li>Mériadec Lebas</li>
+        </ul>
+        <strong>Chef de coeur</strong>
+        <ul>
+          <li>Steven Testelin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
         <h4>Les chefs de coeurs</h4>
-        <p>
-          <ul>
-            <li>2015-2016: Steven Testelin</li>
-            <li>2013-2015: Quỳnh Lan Dương</li>
-            <li>2012-2013: Vincent Champdavoine</li>
-            <li>2011-2012: Grégoire Dors</li>
-            <li>2010-2011: Quỳnh Lan Dương</li>
-          </ul>
-        </p>
+        <ul>
+          <li>2015-2016: Steven Testelin</li>
+          <li>2013-2015: Quỳnh Lan Dương</li>
+          <li>2012-2013: Vincent Champdavoine</li>
+          <li>2011-2012: Grégoire Dors</li>
+          <li>2010-2011: Quỳnh Lan Dương</li>
+        </ul>
         <h4>Les membres d'honneur</h4>
-        <p>
-          <ul>
-            <li>Quỳnh Lan Dương</li>
-          <ul>
-        </p>
-        <h4>Les membres non-chantants</h4>
-        <p>
-          <ul>
-            <li>Aurélie Giroud</li>
-            <li>Baptiste Giroud</li>
-            <li>Floriane N'Guyen Van Méo</li>
-            <li>Grégoire Stern</li>
-            <li>Jean Michaël Vauvre</li>
-            <li>Laurent Sainton</li>
-            <li>Quentin Swillens</li>
-            <li>Paul Teisson</li>
-            <li>Virginie Escalada</li>
-          </ul>
-        </p>
-        <h4>Les anciens</h4>
-        <p>
-          <ul>
-            <li>Aurélie Chenot</li>
-            <li>Christelle Lantieri-Jullien</li>
-            <li>Etienne Coumont</li>
-            <li>Gwennaël Nicolas</li>
-            <li>Louis Latouche</li>
-            <li>Michaël Gorré</li>
-            <li>Muriel Maubert</li>
-            <li>Karine Morin</li>
-            <li>Rachel Maarek</li>
-            <li>Rémi Lantieri-Jullien</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Quỳnh Lan Dương</li>
+        <ul>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+      <div class="col-md-4">
+        <h4>Les membres non-chantants</h4>
+        <ul>
+          <li>Aurélie Giroud</li>
+          <li>Baptiste Giroud</li>
+          <li>Floriane N'Guyen Van Méo</li>
+          <li>Grégoire Stern</li>
+          <li>Jean Michaël Vauvre</li>
+          <li>Laurent Sainton</li>
+          <li>Quentin Swillens</li>
+          <li>Paul Teisson</li>
+          <li>Virginie Escalada</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Les anciens</h4>
+        <ul>
+          <li>Aurélie Chenot</li>
+          <li>Christelle Lantieri-Jullien</li>
+          <li>Etienne Coumont</li>
+          <li>Gwennaël Nicolas</li>
+          <li>Louis Latouche</li>
+          <li>Michaël Gorré</li>
+          <li>Muriel Maubert</li>
+          <li>Karine Morin</li>
+          <li>Rachel Maarek</li>
+          <li>Rémi Lantieri-Jullien</li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
 
 <!-- PAGE CONTACT --> 
-<div id="contact" class="pageEven">
+<div id="contact" class="pageOdd">
   <div class="container">
     <div class="row-fluid PageHead">
       <div class="col-md-12">

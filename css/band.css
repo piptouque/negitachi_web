@@ -31,6 +31,7 @@ iframe {
 }
 .navbar {
   background:#080c19;
+  margin-bottom: 0px!important;
 }
 .navbar .nav>li>a {
   color:#FFF;
@@ -152,12 +153,12 @@ iframe {
 .pageOdd {
   color:#fff;
   background-color:#000;
-  height: 100vh;
+  min-height: 100vh;
 }
 .pageEven {
   color:#000;
   background-color:#fff;
-  height: 100vh;
+  min-height: 100vh;
 }
 .ContactUs {
   margin-top:25px;
