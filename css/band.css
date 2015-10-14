@@ -45,7 +45,17 @@ iframe {
   padding-top:5px;
 }
 .navbar li.dropdown:hover ul {
-  display:block;
+  /*display:block;*/
+}
+.dropdown-menu {
+  background-color: #101010!important;
+}
+.dropdown-menu>li>a {
+  color: #9d9d9d!important;
+}
+.dropdown-menu>li>a:hover {
+  background-color: #101010!important;
+  color: #ffffff!important;
 }
 .dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-submenu:hover>a,.dropdown-submenu:focus>a {
   background:#ba091a;
