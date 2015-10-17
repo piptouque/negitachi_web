@@ -9,6 +9,9 @@
 
   <!-- CSS -->
   <link href="css/band.css" rel="stylesheet" media="all">
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   <!-- bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"/>
   <!-- flexslider -->
@@ -36,6 +39,15 @@
     .flex-direction-nav a:before  { color: white; font-size: 75px;}
     /* fix flexslider */
     .flex-direction-nav a {width: auto; height: auto}
+    /* add a border aroung galleria divs */
+    .galleria-container {
+      border: 2px solid black;
+      background-color: #202020;
+    }
+    /* allow centering image thumbnails */
+    .galleria-thumbnails-list {
+      display: inline-block;
+    }
   </style>
   <!-- other -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
@@ -135,13 +147,48 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Réseaux<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a style="padding: 0;" href="https://www.youtube.com/user/Negitachi" target="_blank"><img alt="YouTube" src="images/youtube-icon.png" width="35" height="35"/>YouTube</a></li>
-            <li><a style="padding: 0;" href="https://www.facebook.com/negitachi" target="_blank"><img alt="Facebook" src="images/facebook-icon.png" width="35" height="35"/>Facebook</a></li>
-            <li><a style="padding: 0;" href="https://twitter.com/lesnegitachi" target="_blank"><img alt="Twitter" src="images/twitter-icon.png" width="35" height="35"/>Twitter</a></li>
-            <li><a style="padding: 0;" href="https://plus.google.com/+Negitachi" target="_blank"><img alt="Google+" src="images/gplus-icon.png" width="35" height="35"/>Google+</a></li>
-            <li><a style="padding: 0;" href="https://instagram.com/negitachi/" target="_blank"><img alt="Instagram" src="images/instagram-icon.png" width="35" height="35"/>Instagram</a></li>
-            <li><a style="padding: 0;" href="https://www.helloasso.com/associations/negitachi" target="_blank"><img alt="HelloAsso" src="images/helloasso-icon.png" width="35" height="35"/>HelloAsso</a></li>
-            <li><a style="padding: 0;" href="https://www.flickr.com/photos/negitachi" target="_blank"><img alt="Flickr" src="images/flickr-icon.png" width="35" height="35"/>Flickr</a></li>
+            <li class="social">
+              <a href="https://www.youtube.com/user/Negitachi" target="_blank">
+                <img alt="YouTube" src="images/youtube-icon.png" width="35" height="35"/>
+                <span>YouTube</span>
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://www.facebook.com/negitachi" target="_blank">
+                <img alt="Facebook" src="images/facebook-icon.png" width="35" height="35"/>
+                <span>Facebook</span>
+            </a>
+            </li>
+            <li class="social">
+              <a href="https://www.flickr.com/photos/negitachi" target="_blank">
+                <img alt="Flickr" src="images/flickr-icon.png" width="35" height="35"/>
+                <span>Flickr</span>
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://twitter.com/lesnegitachi" target="_blank">
+                <img alt="Twitter" src="images/twitter-icon.png" width="35" height="35"/>
+                <span>Twitter</span>
+            </a>
+            </li>
+            <li class="social">
+              <a href="https://plus.google.com/+Negitachi" target="_blank">
+                <img alt="Google+" src="images/google-plus-icon.png" width="35" height="35"/>
+                <span>Google+</span>
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://instagram.com/negitachi/" target="_blank">
+                <img alt="Instagram" src="images/instagram-icon.png" width="35" height="35"/>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="social">
+              <a href="https://www.helloasso.com/associations/negitachi" target="_blank">
+                <img alt="HelloAsso" src="images/helloasso-icon.png" width="35" height="35"/>
+                <span>HelloAsso</span>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>

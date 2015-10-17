@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-  font-family:"PT Sans",Arial,Helvetica,sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
   background:#FFF;
 }
 a {
@@ -160,9 +160,18 @@ iframe {
   margin:0;
   padding:0;
 }
+.caption > img {
+  border: 2px solid black;
+}
+li.social > a {
+  padding: 2px !important;
+}
+li.social a > span {
+  padding-left: 10px;
+}
 .pageOdd {
-  color:#fff;
-  background-color:#000;
+  color:#000;
+  background-color:#cbffbb;
   min-height: 100vh;
 }
 .pageEven {
