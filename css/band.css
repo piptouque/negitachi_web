@@ -179,6 +179,29 @@ li.social a > span {
   background-color:#fff;
   min-height: 100vh;
 }
+.facebook {
+  position: fixed;
+  top: 100px;
+  right: -300px;
+  width: 300px;
+  -webkit-transition: right .2s linear;
+  -moz-transition: right .2s linear;
+  transition: right .2s linear;
+}
+.active {
+  right: 0px;
+}
+.facebook > a {
+  position: absolute;
+  left: -45px;
+  top: 10%;
+  width: 45px;
+  transition: color 100ms ease-in-out;
+  -o-transition: color 100ms ease-in-out;
+  -ms-transition: color 100ms ease-in-out;
+  -moz-transition: color 100ms ease-in-out;
+  -webkit-transition: color 100ms ease-in-out;
+}
 .ContactUs {
   margin-top:25px;
 }
