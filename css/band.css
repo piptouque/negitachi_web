@@ -187,14 +187,16 @@ li.social a > span {
   -webkit-transition: right .2s linear;
   -moz-transition: right .2s linear;
   transition: right .2s linear;
+  border: 1px solid black;
 }
 .active {
   right: 0px;
+  z-index: 1000;
 }
 .facebook > a {
   position: absolute;
   left: -45px;
-  top: 10%;
+  top: 45px;
   width: 45px;
   transition: color 100ms ease-in-out;
   -o-transition: color 100ms ease-in-out;
