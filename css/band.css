@@ -189,10 +189,6 @@ li.social a > span {
   transition: right .2s linear;
   border: 1px solid black;
 }
-.active {
-  right: 0px;
-  z-index: 1000;
-}
 .facebook > a {
   position: absolute;
   left: -45px;
@@ -203,6 +199,41 @@ li.social a > span {
   -ms-transition: color 100ms ease-in-out;
   -moz-transition: color 100ms ease-in-out;
   -webkit-transition: color 100ms ease-in-out;
+}
+.twitter {
+  position: fixed;
+  top: 100px;
+  right: -300px;
+  width: 300px;
+  -webkit-transition: right .2s linear;
+  -moz-transition: right .2s linear;
+  transition: right .2s linear;
+}
+.twitter > a, .twitter-inner {
+  position: absolute;
+  left: -35px;
+  top: 250px;
+  height: 35px;
+  transition: color 100ms ease-in-out;
+  -o-transition: color 100ms ease-in-out;
+  -ms-transition: color 100ms ease-in-out;
+  -moz-transition: color 100ms ease-in-out;
+  -webkit-transition: color 100ms ease-in-out;
+
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  cursor: pointer;
+
+  background-color: #55acee;
+  padding: 5px 10px 0 10px;
+  border-radius: 7px 7px 0 0;
+  font-size: 15pt;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.active {
+  right: 0px;
+  z-index: 1000;
 }
 .ContactUs {
   margin-top:25px;

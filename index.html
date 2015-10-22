@@ -562,6 +562,38 @@
   </div>
 </div>
 
+<div class="twitter">
+  <div class="twitter-inner" data-click="twitter-panel-expand">Twitter</div>
+  <div>
+    <a class="twitter-timeline" href="https://twitter.com/LesNegitachi" data-widget-id="656907453976719360" width="300" height="400">Tweets by @LesNegitachi</a>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $(document).on("click", '[data-click="twitter-panel-expand"]', function() {
+        var e = ".twitter",
+        a = "active";
+        $(e).hasClass(a) ? $(e).removeClass(a) : $(e).addClass(a)
+      })
+    })
+  </script>
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+</div>
+
 <!-- FOOTER -->
 <div class="footer" id="footer">
   <div class="container">
