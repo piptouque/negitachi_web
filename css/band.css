@@ -189,16 +189,27 @@ li.social a > span {
   transition: right .2s linear;
   border: 1px solid black;
 }
-.facebook > a {
+.facebook > a, .facebook-inner {
   position: absolute;
-  left: -45px;
-  top: 45px;
-  width: 45px;
+  left: -35px;
+  top: 150px;
+  height: 35px;
   transition: color 100ms ease-in-out;
   -o-transition: color 100ms ease-in-out;
   -ms-transition: color 100ms ease-in-out;
   -moz-transition: color 100ms ease-in-out;
   -webkit-transition: color 100ms ease-in-out;
+
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  cursor: pointer;
+
+  background-color: #3b5998;
+  padding: 5px 10px 0 10px;
+  border-radius: 7px 7px 0 0;
+  font-family: 'Archivo Black', sans-serif !important;
+  font-size: 12pt;
+  color: #ffffff;
 }
 .twitter {
   position: fixed;
@@ -227,8 +238,8 @@ li.social a > span {
   background-color: #55acee;
   padding: 5px 10px 0 10px;
   border-radius: 7px 7px 0 0;
-  font-size: 15pt;
-  font-weight: bolder;
+  font-family: 'Righteous', sans-serif !important;
+  font-size: 12pt;
   color: #ffffff;
 }
 .active {
