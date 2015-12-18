@@ -171,8 +171,11 @@ li.social a > span {
 }
 .pageOdd {
   color:#000;
-  background-color:#cbffbb;
+  background-color:#327d49;
   min-height: 100vh;
+}
+.pageOdd a {
+  color:#040c72;
 }
 .pageEven {
   color:#000;
