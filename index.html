@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Negitachi - Chorale acapella, Geek et Otaku</title>
+  <title>Les Negitachi - Groupe vocal geek, otaku et déjanté</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="alternate" type="application/rss+xml" title="Les Negitachi RSS Feed" href="http://www.negitachi.fr/feed/"/>
 
@@ -135,6 +135,16 @@
       history.replaceState({}, "", $anchor);
     });
   </script>
+
+  <!-- collapse navbar on mobile on click -->
+  <script>
+    $(function(){
+      var navMain = $("#bs-example-navbar-collapse-1");
+      navMain.on("click", "a", null, function () {
+        navMain.collapse('hide');
+      });
+    });
+  </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="75">
@@ -228,8 +238,8 @@
         <li>
           <div class="hero-unit" style="padding-top: 50px">
             <img style="width:300px; display: initial" src="images/logo-big.png" alt="band logo">
-            <h1>Negitachi</h1>
-            <h3 class="subtitle fancy hidden-phone"><span>Chorale acapella, Geek et Otaku,<br/><br/>avec beaucoup de poireaux et de fun<br/><br/>à l'intérieur</span></h3>
+            <h1>Les Negitachi</h1>
+            <h3 class="subtitle fancy hidden-phone"><span>Groupe vocal geek, otaku et déjanté</span></h3>
           </div>
         </li>
         <!-- SLIDE 2 -->
@@ -577,7 +587,7 @@
               <input class="input-block-level" type="text" placeholder="Votre petit nom" name="name" id="name">
             </div>
             <div class="control-group">
-              <input class="input-block-level" type="email" placeholder="Votre addresse mail" name="email" id="email">
+              <input class="input-block-level" type="email" placeholder="Votre adresse mail" name="email" id="email">
             </div>
             <div class="control-group">
               <textarea class="input-block-level" rows="10" name="message" placeholder="Votre message" id="message"></textarea>
