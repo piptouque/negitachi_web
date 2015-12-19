@@ -267,9 +267,23 @@ li.social a > span {
 }
 .ContactUs input[type=text],.ContactUs input[type=email] {
   height:50px;
+  border-radius: 15px;
+  margin-top: 15px;
+  width: 100%;
 }
 .ContactUs textarea {
   height:150px;
+  border-radius: 25px;
+  margin-top: 15px;
+  resize: none;
+  width: 100%;
+}
+.ContactUs input[type=submit] {
+  margin-top: 15px;
+  background-color: #ff6a00;
+  border-radius: 15px;
+  font-weight: bolder;
+  width: 100%;
 }
 .footer {
   color:#fff;

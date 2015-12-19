@@ -565,31 +565,34 @@
   <div class="container">
     <div class="row-fluid PageHead">
       <div class="col-md-12">
-        <h3>Nous contacter</h3>
+        <h3>Contactez-nous</h3>
       </div>
     </div>
-    <div class="col-md-8 col-md-offset-2">
-      <div class="row-fluid ContactUs">
-        <!-- FIXME: redirect to a php sendmail page -->
-        <form class="form-horizontal" id="phpcontactform">
-          <div class="control-group">
-            <input class="input-block-level col-md-8 col-md-offset-2" type="text" placeholder="Votre petit nom" name="name" id="name">
-          </div>
-          <div class="control-group">
-            <input class="input-block-level col-md-8 col-md-offset-2" type="email" placeholder="Votre addresse mail" name="email" id="email">
-          </div>
-          <div class="control-group">
-            <textarea class="input-block-level col-md-8 col-md-offset-2" rows="10" name="message" placeholder="Votre message" id="message"></textarea>
-          </div>
-          <div class="control-group">
-            <p>
-              <input class="btn btn-danger btn-large col-md-8 col-md-offset-2" type="submit" value="Send Message">
-            </p>
-            <span class="loading"></span>
-          </div>
-        </form>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row-fluid ContactUs">
+          <!-- FIXME: redirect to a php sendmail page -->
+          <form class="form-horizontal" id="phpcontactform">
+            <div class="control-group">
+              <input class="input-block-level" type="text" placeholder="Votre petit nom" name="name" id="name">
+            </div>
+            <div class="control-group">
+              <input class="input-block-level" type="email" placeholder="Votre addresse mail" name="email" id="email">
+            </div>
+            <div class="control-group">
+              <textarea class="input-block-level" rows="10" name="message" placeholder="Votre message" id="message"></textarea>
+            </div>
+            <div class="control-group">
+              <input class="btn btn-large" type="submit" value="Envoyer">
+              <span class="loading"></span>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <center>
+      <h3>Ou envoyez-nous un mail à contact@negitachi.fr</h3>
+    </center>
   </div>
 </div>
 
@@ -662,7 +665,7 @@
 <div class="footer" id="footer">
   <div class="container">
     <div class="row-fluid">
-      <p class="text-center">Copyright &copy; 2015. Negitachi</p>
+      <p class="text-center">Copyright &copy; 2015-2016. Negitachi</p>
     </div>
   </div>
 </div>
