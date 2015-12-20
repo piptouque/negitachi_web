@@ -189,6 +189,9 @@ li.social a > span {
   height: 30px;
   background-image: linear-gradient(to bottom, black, black 15px, white 30px);
 }
+.lead {
+  text-align: justify;
+}
 .overlay {
   position: absolute;
   top:0;
@@ -271,14 +274,24 @@ li.social a > span {
   height:50px;
   border-radius: 15px;
   margin-top: 15px;
+  padding: 10px;
   width: 100%;
+  border-left: 2px solid rgb(169, 169, 169);
+  border-top: 2px solid rgb(169, 169, 169);
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }
 .ContactUs textarea {
   height:150px;
   border-radius: 25px;
   margin-top: 15px;
+  padding: 10px;
   resize: none;
   width: 100%;
+  border-left: 2px solid rgb(169, 169, 169);
+  border-top: 2px solid rgb(169, 169, 169);
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }
 .ContactUs input[type=submit] {
   margin-top: 15px;
@@ -286,6 +299,7 @@ li.social a > span {
   border-radius: 15px;
   font-weight: bolder;
   width: 100%;
+  border: 1px solid black;
 }
 .footer {
   color:#fff;
