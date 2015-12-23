@@ -293,7 +293,7 @@ li.social a > span {
   border-right: 2px solid white;
   border-bottom: 2px solid white;
 }
-.ContactUs input[type=submit] {
+.ContactUs input[type=button] {
   margin-top: 15px;
   background-color: #ff6a00;
   border-radius: 15px;
