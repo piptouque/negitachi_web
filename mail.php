@@ -32,7 +32,8 @@
     return;
   }
 
-  $TO = "root@leligeour.net"; // FIXME: change
+  // FIXME: if host does not end with negitachi.fr disable mail
+  $TO = "root@leligeour.net";
   $SUBJECT = "[Negitachi] Contact depuis le site web ($name)";
 
   if(!mail($TO , $SUBJECT, $message, $headers)) {
