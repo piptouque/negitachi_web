@@ -393,3 +393,14 @@ ul {
   margin:0;
   padding:0;
 }
+
+div.concert {
+  display: inline-block;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 25%;
+  min-width: 200px;
+  margin-bottom: 2em;
+}
