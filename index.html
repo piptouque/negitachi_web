@@ -25,12 +25,20 @@
   <style>
     /* remove flexslider borders */
     .flexslider{
-      margin:0px;
-      background:none;
-      border:none;
-      box-shadow:none;
-      background-color: rgba(15, 15, 15, 0.65) !important;
+      margin: 0px;
+      background: none;
+      border: none;
+      box-shadow: none;
       margin-top: 5% !important;
+    }
+    .flexslider h1{
+      text-shadow: 0px 0px 6px #000000;
+    }
+    .flexslider h2{
+      text-shadow: 0px 0px 4px #000000;
+    }
+    .flexslider h3{
+      text-shadow: 0px 0px 2px #000000;
     }
     /* modify arrows font */
     .flex-direction-nav a:before  { color: white; font-size: 65px;}
@@ -163,6 +171,34 @@
           }
         }, "json");
       });
+    });
+  </script>
+
+  <!-- reorder concert dates -->
+  <script>
+    $(document).ready(function(){
+      "use_strict";
+      var concerts = $(".concert").remove();
+      function el_to_timestamp(element){
+        return new Date($(element).data("date")).valueOf()
+      }
+      concerts = concerts.sort(function(a, b){
+        return el_to_timestamp(a) - el_to_timestamp(b);
+      });
+      // Concerts are considered "future" until the next day
+      var now = new Date().valueOf() - 1000 * 3600 * 24;
+
+      $.each(concerts, function(){
+        concert = $(this);
+        var concert_date = el_to_timestamp(this);
+        console.log(concert_date, now);
+        if (concert_date > now){
+          $(".FutureEvents").append(concert);
+        }
+        else {
+          $(".PastEvents").prepend(concert);
+        }
+      })
     });
   </script>
 </head>
@@ -329,41 +365,42 @@
   <div class="container">
     <div class="row-fluid PageHead">
       <div class="col-md-12">
-        <h3 style="padding-bottom:20px">Nos concerts cette année</h3>
+        <h3 style="padding-bottom:20px">Nos prochains concerts</h3>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row-fluid EventsList">
-      <div class="col-md-3">
+    <div class="row-fluid EventsList FutureEvents">
+      <div class="concert" data-date="2015-12-12">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/musee-en-herbe.jpg" alt="Musée en Herbe" style="width:100%"/>
             <h3>Musée en Herbe</h3>
             <p><b>Happening Tintin</b></p>
             <p>
-              12 Décembre 2016<br>
+              12 Décembre 2015<br>
               Musée en Herbe, Paris I
             </p>
             <p class="text-center"><a href="#" class="btn btn-med">Facebook</a></p>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="concert"  data-date="2015-12-16">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/max-linder.jpg" alt="Première StarWars" style="width:100%"/>
             <h3>Première StarWars</h3>
             <p><b>Happening StarWars</b></p>
             <p>
-              16 Décembre 2016<br>
+              16 Décembre 2015<br>
               Cinéma Max Linder Panorama, Paris IX
             </p>
             <p class="text-center"><a href="#" class="btn btn-med">Facebook</a></p>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+
+      <div class="concert" data-date="2016-01-16">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/mordus-du-manga.jpg" alt="Mordus du Manga" style="width:100%"/>
@@ -376,7 +413,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+
+      <div class="concert" data-date="2016-05-01">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/kiosque.jpg" alt="Kiosque en Musique" style="width:100%"/>
@@ -389,11 +427,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container" style="margin-top: 20px">
-    <div class="row-fluid EventsList">
-      <div class="col-md-3">
+
+      <div class="concert" data-date="2016-05-29">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/epitanime.png" alt="Epitanime" style="width:100%"/>
@@ -406,7 +441,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+
+      <div class="concert" data-date="2016-06-07">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/kawaii_cafe.jpg" alt="Kawaii Café" style="width:100%"/>
@@ -419,7 +455,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+
+      <div class="concert" data-date="2016-06-21">
         <div class="thumbnail">
           <div class="caption">
             <img src="images/fete_musique.jpg" alt="Fête de la Musique" style="width:100%"/>
@@ -433,6 +470,10 @@
         </div>
       </div>
     </div>
+    <div class="col-md-12">
+      <h3 style="padding-bottom:20px">Et quelques uns déjà passés...</h3>
+    </div>
+    <div class="row-fluid EventsList PastEvents"></div>
     <div class="row">
       <div class="col-md-12">
         <center>
@@ -660,7 +701,7 @@
       </div>
     </div>
     <center>
-      <h3>Ou envoyez-nous un mail à contact@negitachi.fr</h3>
+      <h3>Ou envoyez-nous un mail à contact arobase negitachi.fr</h3>
     </center>
   </div>
 </div>
