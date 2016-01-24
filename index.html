@@ -191,7 +191,6 @@
       $.each(concerts, function(){
         concert = $(this);
         var concert_date = el_to_timestamp(this);
-        console.log(concert_date, now);
         if (concert_date > now){
           $(".FutureEvents").append(concert);
         }
