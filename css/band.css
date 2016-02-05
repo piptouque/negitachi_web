@@ -146,6 +146,7 @@ iframe {
 }
 .EventsList {
   margin-bottom:15px;
+  text-align:center;
 }
 .EventsList .thumbnail {
   border:0;
