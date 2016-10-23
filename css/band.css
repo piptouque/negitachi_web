@@ -190,6 +190,16 @@ li.social a > span {
   height: 30px;
   background-image: linear-gradient(to bottom, black, black 15px, white 30px);
 }
+.evenToOdd {
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(to bottom, #f1ffe7, #f1ffe7 15px, #327d49 30px);
+}
+.oddToEven {
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(to bottom, #327d49, #327d49 15px, #f1ffe7 30px);
+}
 .lead {
   text-align: justify;
 }
