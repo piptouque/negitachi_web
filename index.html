@@ -155,35 +155,6 @@
     });
   </script>
 
-  <!-- form -->
-  <script>
-    $(document).ready(function(){
-      $("#submitButton").click(function( event ) {
-        var form = $("#contactForm");
-
-        var email = $("#submitEmail").val();
-        var name = $("#submitName").val();
-        var message = $("#submitMessage").val();
-        var subject = "[Negitachi] Contact depuis le site web " + name;
-
-        $.ajax({
-          url: form.attr("action"),
-          method: "POST",
-          data: {email: email, name: name, message: message, _subject: subject},
-          dataType: "json",
-          success: function(){
-            alert("Message envoyé ! On vous recontacte rapidement !");
-          },
-          error: function(){
-            alert("Il y a eu un problème ! Essayez de nous contacter par Facebook ou Twitter ?")
-          }
-        });
-
-        event.preventDefault();
-      });
-    });
-  </script>
-
   <!-- reorder concert dates -->
   <script>
     $(document).ready(function(){
