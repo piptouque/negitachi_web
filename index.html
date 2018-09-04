@@ -96,7 +96,7 @@
 
   <script>
     $(function() {
-      $('.nav li a, .jumbotron p a').bind('click',function(event){
+      $('.nav li a, .jumbotron p a, #recruitlink').bind('click',function(event){
         var $anchor2 = $(this).parent();
         var $anchor = $(this);
         $('.nav  li').removeClass('active');
@@ -209,6 +209,7 @@
         <li><a href="#videos">Vidéos</a></li>
         <li><a href="#photos">Photos</a></li>
         <li><a href="#members">Membres</a></li>
+        <li><a href="#recruit">Recrutement</a></li>
         <li><a href="#contact">Nous contacter</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Réseaux<span class="caret"></span></a>
@@ -266,11 +267,11 @@
         <li>
           <div class="hero-unit" style="padding-top: 50px">
             <img style="width:400px; display: initial" src="images/nsc.jpg" alt="band logo">
-            <h1>Tout l'été, les Negitachi Summer Camp</h1>
+            <h1>Rejoignez les Negitachi !</h1>
             <h3 class="subtitle hidden-phone">
               <span>
-                Venez chanter avec nous cet été pour nous rejoindre à la rentrée prochaine<br>
-		Plus d'information à <a style="color:#43f765" href="mailto:contact@negitachi.fr?subject=Comment participer aux NSC%3f">contact@negitachi.fr</a>
+                Nous recrutons pour la rentrée 2018 à Paris !<br>
+                Plus d'informations <a id="recruitlink" style="color:#43f765" href="#recruit">ici</a>
               </span>
             </h3>
           </div>
@@ -725,8 +726,40 @@
 
 <div class="evenToOdd"></div>
 
+<!-- PAGE RECRUTEMENT -->
+<div id="recruit" class="pageOdd">
+  <div class="container">
+    <div class="row-fluid PageHead">
+      <div class="col-md-12">
+        <h3>Recrutement</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" style="padding: 10px">
+        <img src="images/negi-4.jpg" alt="Photo Chorale Negitachi" style="width:100%"/>
+      </div>
+      <div class="col-md-8" style="padding: 10px">
+        <p class="lead">
+          Pour le démarrage de la saison 2018/2019, nous recrutons sur tous les pupitres et plus particulièrement des ténors !
+        </p>
+        <br/>
+        <p class="lead">
+            <b>Infos pratiques :</b><br/>
+            Les répétitions ont lieu tous les lundi de 19h à 21h<br/>
+            La salle de répétition se trouve à Paris aux alentours de la station Charles de Gaulle Étoile
+        </p>
+      </div>
+    </div>
+    <center>
+      <h3>Pour nous rejoindre, utilisez le formulaire de contact ci-dessous ou envoyez-nous un mail à contact arobase negitachi.fr</h3>
+    </center>
+  </div>
+</div>
+
+<div class="oddToEven"></div>
+
 <!-- PAGE CONTACT -->
-<div id="contact" class="pageOdd">
+<div id="contact" class="pageEven">
   <div class="container">
     <div class="row-fluid PageHead">
       <div class="col-md-12">
