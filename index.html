@@ -1,4 +1,4 @@
-0<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- inspired from http://themeforest.net/item/raaga-responsive-parallax-template-for-bands/full_screen_preview/5523418?ref=magazinehive -->
 <html lang="fr">
 <head>
@@ -16,7 +16,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css' /> <!-- for Facebook -->
-  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' /> <!-- for Twitter -->
+  <!--link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' /--> <!-- for Twitter (mais plus alimenté) -->
   <!-- bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"/>
   <!-- flexslider -->
@@ -116,7 +116,7 @@
     });
   </script>
 
-  <!-- scrollup button -->
+  <!-- scrollup button on the bottom right corner -->
   <script>
     $(document).ready(function(){
       $(window).scroll(function(){
@@ -126,8 +126,7 @@
           $('.scrollup').fadeOut();
         }
       });
-
-      $('.scrollup').click(function(){
+      $('.scrollup, .navbar-brand').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
       });
@@ -196,9 +195,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://www.helloasso.com/associations/negitachi" target="_blank"><img alt="HelloAsso" src="images/helloasso-icon.png" width="35" height="35"/></a>
+      <a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://www.flickr.com/photos/negitachi" target="_blank"><img alt="Flickr" src="images/flickr-icon.png" width="35" height="35"/></a>
       <a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://www.youtube.com/user/Negitachi" target="_blank"><img alt="YouTube" src="images/youtube-icon.png" width="35" height="35"/></a>
       <a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://www.facebook.com/negitachi" target="_blank"><img alt="Facebook" src="images/facebook-icon.png" width="35" height="35"/></a>
-      <a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://twitter.com/lesnegitachi" target="_blank"><img alt="Twitter" src="images/twitter-icon.png" width="35" height="35"/></a>
+      <!-- Twitter plus alimenté -->
+      <!--a class="navbar-toggle collapsed" style="margin: 0px; padding: 2px" href="https://twitter.com/lesnegitachi" target="_blank"><img alt="Twitter" src="images/twitter-icon.png" width="35" height="35"/></a-->
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -210,48 +212,35 @@
         <li><a href="#photos">Photos</a></li>
         <li><a href="#members">Membres</a></li>
         <li><a href="#recruit">Recrutement</a></li>
-        <li><a href="#contact">Nous contacter</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Réseaux<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="social">
-              <a href="https://www.youtube.com/user/Negitachi" target="_blank">
-                <img alt="YouTube" src="images/youtube-icon.png" width="35" height="35"/>
-                <span>YouTube</span>
-              </a>
-            </li>
+        <li><a href="#press">Presse</a></li>
+        <li><a href="#contact">Contact</a></li>
             <li class="social">
               <a href="https://www.facebook.com/negitachi" target="_blank">
                 <img alt="Facebook" src="images/facebook-icon.png" width="35" height="35"/>
-                <span>Facebook</span>
-            </a>
+            </a>&nbsp;
+            </li>
+            <li class="social">
+              <a href="https://www.youtube.com/user/Negitachi" target="_blank">
+                <img alt="YouTube" src="images/youtube-icon.png" width="35" height="35"/>
+              </a>&nbsp;
             </li>
             <li class="social">
               <a href="https://www.flickr.com/photos/negitachi" target="_blank">
                 <img alt="Flickr" src="images/flickr-icon.png" width="35" height="35"/>
-                <span>Flickr</span>
-              </a>
+              </a>&nbsp;
             </li>
-            <li class="social">
+            <!-- Twitter plus alimenté -->
+            <!--li class="social">
               <a href="https://twitter.com/lesnegitachi" target="_blank">
                 <img alt="Twitter" src="images/twitter-icon.png" width="35" height="35"/>
                 <span>Twitter</span>
             </a>
-            </li>
-            <li class="social">
-              <a href="https://plus.google.com/+Negitachi" target="_blank">
-                <img alt="Google+" src="images/google-plus-icon.png" width="35" height="35"/>
-                <span>Google+</span>
-              </a>
-            </li>
+            </li-->
             <li class="social">
               <a href="https://www.helloasso.com/associations/negitachi" target="_blank">
                 <img alt="HelloAsso" src="images/helloasso-icon.png" width="35" height="35"/>
-                <span>HelloAsso</span>
-              </a>
+              </a>&nbsp;
             </li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
@@ -261,35 +250,42 @@
 <div id="home" class="pageOdd jumbotron masthead" data-stellar-background-ratio="0.5" style="margin-bottom: 0px">
   <div class="overlay"></div>
   <div class="container" style="color: white; height: 90%">
-    <div class="flexslider" id="flexslider_home" style="margin:0px; background:none; border:none; box-shadow:none; height: 100%">
+    <div class="flexslider" id="flexslider_home" style="margin:0px; background:none; border:none; box-shadow:none;">
       <ul class="slides">
         <!-- SLIDE 1 -->
         <li>
-          <div class="hero-unit" style="padding-top: 50px">
-            <img style="width:300px; display: initial" src="images/logo-big.png" alt="band logo">
+          <div class="hero-unit" style="padding-top: 10px">
+            <img style="width:250px; display: initial" src="images/logo-big.png" alt="band logo">
             <h1>Les Negitachi</h1>
             <h3 class="subtitle fancy hidden-phone"><span>Groupe vocal geek, otaku et déjanté</span></h3>
           </div>
         </li>
         <!-- SLIDE 2 -->
         <li>
-          <div class="slide2">
-            <p>
-              <iframe style="width: 50vw; height: 28.125vw" src="https://www.youtube.com/embed/FICg2rN6CTg?showinfo=0" allowfullscreen></iframe>
-            </p>
-            <h3>Pour la sortie de la saison 7 de Game of Thrones, les Negitachi chantent «Rains of Castamere»</h3>
+          <div class="slide" style="padding-top: 10px">
+            <img style="width:250px; display: initial" src="images/logo-big.png" alt="band logo">
+            <h1>Les concerts 2019 !</h1>
+            <h3>
+                La saison des concerts 2019 se déroule jusqu'à cet été.<br/>Venez découvrir nos nouvelles chansons de 2019<br/><a style="color:#43f765" href="#concerts">Nos concerts</a>
+            </h3>
           </div>
         </li>
         <!-- SLIDE 3 -->
         <li>
-          <div class="hero-unit" style="padding-top: 50px">
-            <img style="width:400px; display: initial" src="images/nsc.jpg" alt="band logo">
+          <div class="slide">
+            <p>
+              <iframe style="width: 50vw; height: 28.125vw" src="https://www.youtube.com/embed/FICg2rN6CTg?showinfo=0" allowfullscreen></iframe>
+            </p>
+            <h3>Pour la sortie de la saison 8 de Game of Thrones, les Negitachi chantent «Rains of Castamere»</h3>
+          </div>
+        </li>
+        <li>
+          <div class="slide" style="padding-top: 10px">
+            <img style="width:250px; display: initial" src="images/logo-big.png" alt="band logo">
             <h1>Rejoignez les Negitachi !</h1>
-            <h3 class="subtitle hidden-phone">
-              <span>
+            <h3>
                 Prenez contact avec nous pour la rentrée 2019 !<br>
-                Plus d'informations <a id="recruitlink" style="color:#43f765" href="#recruit">ici</a>
-              </span>
+                <a id="recruitlink" style="color:#43f765" href="#recruit">Recrutement</a>
             </h3>
           </div>
         </li>
@@ -310,7 +306,7 @@
     </div>
     <div class="row">
       <div class="col-md-4" style="padding: 10px">
-        <img src="images/negi-1.jpg" alt="Première de StarWars au Max Linder Panorama" style="width:100%"/>
+        <img src="images/negi-8.jpg" alt="Photo chorale Negitachi" style="width:100%"/>
       </div>
       <div class="col-md-8" style="padding: 10px">
         <p class="lead">
@@ -333,12 +329,12 @@
         </p>
       </div>
       <div class="col-md-4" style="padding: 10px">
-        <img src="images/negi-2.jpg" alt="100% sur Nolife" style="width:100%"/>
+        <img src="images/negi-9.jpg" alt="Photo chorale Negitachi" style="width:100%"/>
       </div>
     </div>
     <div class="row">
       <div class="col-md-5" style="padding: 10px">
-        <img src="images/negi-3.jpg" alt="Membres 2015/2016" style="width:100%"/>
+        <img src="images/negi-10.jpg" alt="Photo chorale Negitachi" style="width:100%"/>
       </div>
       <div class="col-md-7" style="padding: 10px">
         <p class="lead">
@@ -364,6 +360,104 @@
   </div>
   <div class="container">
     <div class="row-fluid EventsList FutureEvents">
+      <div class="concert" data-date="2019-06-30">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/voix-sur-berges.jpg" alt="Voix sur Berges" style="width:100%"/>
+            <h3>Voix sur Berges</h3>
+            <p>
+              30 Juin 2019<br>
+              Quai de Jemmapes, Paris X
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-06-21">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/fete_musique.jpg" alt="Fête de la Musique" style="width:100%"/>
+            <h3>Fête de la Musique</h3>
+            <p>
+              21 Juin 2018<br>
+              Dernier bar avant la fin du monde, Paris I
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-06-12">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/kawaii.png" alt="Kawaii Café" style="width:100%"/>
+            <h3>Kawaii Café</h3>
+            <p>
+              12 Juin 2019<br>
+              Kawaii Café, Paris XI
+            </p>
+            <p class="text-center"><a href="https://www.facebook.com/events/2298764530402138/" class="btn btn-med">Facebook</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-06-07">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/renard_dore.png" alt="Renard Doré" style="width:100%"/>
+            <h3>Le Renard Doré</h3>
+            <p>
+              7 Juin 2019<br>
+              Le Renard Doré, Paris V
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-06-06">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/FGO-Barbara.jpg" alt="Jam Session" style="width:100%"/>
+            <h3>Jam Session</h3>
+            <p>
+              6 Juin 2019<br>
+              FGO Barbara, Paris XVIII
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-05-27">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/kiosques.jpg" alt="Kiosques en fête" style="width:100%"/>
+            <h3>Kiosques en fête</h3>
+            <p>
+              27 Mai 2019<br>
+              Square Jean XXIII, Paris IV
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-05-19">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/bd_puteaux.jpg" alt="Festival BD de Puteaux" style="width:100%"/>
+            <h3>Festival BD de Puteaux</h3>
+            <p>
+              18 et 19 mai 2019<br>
+              Hôtel de ville de Puteaux
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="concert" data-date="2019-04-23">
+        <div class="thumbnail">
+          <div class="caption">
+            <img src="images/Dernier_Bar.png" alt="Dernier bar avant la fin du monde" style="width:100%"/>
+            <h3>Dernier bar avant la fin du monde</h3>
+            <p>
+              23 Avril 2019<br>
+              Dernier bar avant la fin du monde, Paris I
+            </p>
+            <p class="text-center"><a href="https://www.facebook.com/events/1219951681504014/" class="btn btn-med">Facebook</a></p>
+          </div>
+        </div>
+      </div>
       <div class="concert" data-date="2019-01-19">
         <div class="thumbnail">
           <div class="caption">
@@ -400,136 +494,6 @@
               Médiathèque de l'Horloge, Cergy
             </p>
             <p class="text-center"><a href="https://www.facebook.com/events/265450787431772/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2017-12-13">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/ugc_starwars.jpg" alt="UGC" style="width:100%"/>
-            <h3>Sortie StarWars VIII</h3>
-            <p>
-              13 Décembre 2017<br>
-              UGC Ciné Cité Les Halles, Paris I
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/negitachi" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-02-07">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/mpaa.gif" alt="MPAA" style="width:100%"/>
-            <h3>Ch&oelig;urs en Hiver</h3>
-            <p>
-              7 Février 2018<br>
-              MPAA Saint-Germain, Paris VI
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/1797658696911013/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-03-10">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/otaku-social-club.png" alt="Otaku Social Club" style="width:100%"/>
-            <h3>Soirée Ghibli</h3>
-            <p>
-              10 Mars 2018<br>
-              Otaku Social Club, Paris II
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/negitachi" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-05-14">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/kiosques.jpg" alt="Kiosques en Fête" style="width:100%"/>
-            <h3>Kiosques en Fête</h3>
-            <p>
-              14 Mai 2018<br>
-              Square Jean-XXIII, Paris IV
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/2042475385992986/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-05-27">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/mots_air.jpg" alt="Des mots dans l'air" style="width:100%"/>
-            <h3>Des mots dans l'air</h3>
-            <p>
-              27 Mai 2018<br>
-              Parc de la Légion d'Honneur, Saint-Denis
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/negitachi" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-06-02">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/epitanime.png" alt="Epitanime" style="width:100%"/>
-            <h3>Epitanime</h3>
-            <p>
-              2 Juin 2018<br>
-              Pôle Technologique IONIS, Kremlin-Bicêtre
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/635146950155043/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-06-05">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/kawaii.png" alt="Kawaii Café" style="width:100%"/>
-            <h3>Kawaii Café</h3>
-            <p>
-              5 Juin 2018<br>
-              Kawaii Café, Paris XI
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/384358368717232/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-06-21">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/fete_musique.jpg" alt="Fête de la Musique" style="width:100%"/>
-            <h3>Fête de la Musique</h3>
-            <p>
-              21 Juin 2018<br>
-              Dernière barge avant la fin du monde, Paris XIII
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/440914422999685/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-06-24">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/voix-sur-berges.jpg" alt="Voix sur Berges" style="width:100%"/>
-            <h3>Voix sur Berges</h3>
-            <p>
-              24 Juin 2018<br>
-              Quai de Jemmapes, Paris X
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/1840216296283929/" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2018-06-30">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/renard_dore.png" alt="Renard Doré" style="width:100%"/>
-            <h3>Le Renard Doré</h3>
-            <p>
-              30 Juin 2018<br>
-              Le Renard Doré, Paris V
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/614458765591671/" class="btn btn-med">Facebook</a></p>
           </div>
         </div>
       </div>
@@ -653,6 +617,7 @@
               <li>Claire L.</li>
               <li>Gaëlle A.</li>
               <li>Lia G.</li>
+              <li>Lou L.</li>
               <li>Véronique V.</li>
             </ul>
             <strong>Altos</strong><br>
@@ -705,7 +670,6 @@
         <ul>
           <li>Baptiste B.</li>
           <li>Cécile B.</li>
-          <li>Lou L.</li>
           <li>Mathilde W.</li>
           <li>Manuel L.</li>
           <li>Pascale M.</li>
@@ -779,7 +743,7 @@
     </div>
     <div class="row">
       <div class="col-md-4" style="padding: 10px">
-        <img src="images/negi-4.jpg" alt="Photo Chorale Negitachi" style="width:100%"/>
+        <img src="images/negi-5.jpg" alt="Photo Chorale Negitachi" style="width:100%"/>
       </div>
       <div class="col-md-8" style="padding: 10px">
         <p class="lead">
@@ -803,8 +767,48 @@
 
 <div class="oddToEven"></div>
 
+<!-- PAGE PRESSE -->
+<div id="press" class="pageEven">
+  <div class="container">
+    <div class="row-fluid PageHead">
+      <div class="col-md-12">
+        <h3>La presse en parle</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" style="padding: 10px">
+	  <center>
+        <img src="images/le-monde.jpg" alt="Journal Le Monde" style="height:100px;"/>
+		<h3>
+          Quelle activité pour changer du judo à la rentrée ?<br/>
+		  Chanter dans une chorale vidéoludique !<br/>
+		  <a href="https://www.lemonde.fr/pixels/article/2018/09/03/rentree-huit-activites-pour-changer-du-judo_5349363_4408996.html" target="_blank">Lien</a>
+        </h3>
+	  </center>
+	  </div>
+      <div class="col-md-6" style="padding: 10px">
+	    <center>
+        <img src="images/le-parisien.svg" alt="Journal Le Parisien" style="height:100px"/>
+		<h3>
+          Les Negitachi, la chorale geek aux accents japonais<br/>
+		  <a href="http://www.parisetudiant.com/etudiant/sortie/fete-musique-les-negitachi-la-chorale-geek-aux-accents-japonais-paris.html" target="_blank">Lien</a>
+        </h3>
+		</center>
+	  </div>
+    </div>
+	<br/>
+    <br/>
+	<br/>
+	<center>
+      <h3>Si vous êtes journaliste ou blogueur(se), n'hésitez pas à nous contacter !</h3>
+    </center>
+  </div>
+</div>
+
+<div class="evenToOdd"></div>
+
 <!-- PAGE CONTACT -->
-<div id="contact" class="pageEven">
+<div id="contact" class="pageOdd">
   <div class="container">
     <div class="row-fluid PageHead">
       <div class="col-md-12">
@@ -874,7 +878,8 @@
   </div>
 </div>
 
-<div class="twitter">
+<!-- Twitter plus alimenté -->
+<!--div class="twitter">
   <div class="twitter-inner" data-click="twitter-panel-expand">Twitter</div>
   <div>
     <a class="twitter-timeline" href="https://twitter.com/LesNegitachi" data-widget-id="656907453976719360" style="width:300px; height:400px">Tweets by @LesNegitachi</a>
@@ -904,13 +909,13 @@
       return t;
     }(document, "script", "twitter-wjs"));
   </script>
-</div>
+</div-->
 
 <!-- FOOTER -->
 <div class="footer" id="footer">
   <div class="container">
     <div class="row-fluid">
-      <p class="text-center">Copyright &copy; 2015-2018. Negitachi</p>
+      <p class="text-center">Copyright &copy; 2015-2019. Negitachi</p>
     </div>
   </div>
 </div>
