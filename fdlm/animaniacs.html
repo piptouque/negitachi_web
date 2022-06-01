@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- inspired from http://themeforest.net/item/raaga-responsive-parallax-template-for-bands/full_screen_preview/5523418?ref=magazinehive -->
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Les Negitachi - Groupe vocal geek, otaku et déjanté</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification"
+            content="1saRMpfpEhpaIy7DCkIgUrwKBZhkLX35e5mHL4IWdUs" />
+        <link rel="alternate" type="application/rss+xml" title="Les Negitachi
+            RSS Feed" href="http://www.negitachi.fr/feed/" />
+        <base href="../" />
+
+        <!-- icon -->
+        <link rel="icon" href="images/logo-small.png" />
+        <!-- CSS -->
+        <link href="css/band.css" rel="stylesheet" media="all">
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans'
+            rel='stylesheet' type='text/css' />
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans'
+            rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Archivo+Black'
+            rel='stylesheet' type='text/css' />
+        <!-- for Facebook -->
+        <!--link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css' /-->
+        <!-- for Twitter -->
+        <!-- bootstrap -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"
+            rel="stylesheet" />
+
+
+        <script>
+    $(function () {
+        $('.nav li a, .jumbotron p a, #recruitlink').bind('click', function (event) {
+            var $anchor2 = $(this).parent();
+            var $anchor = $(this);
+            $('.nav  li').removeClass('active');
+            $anchor2.addClass('active');
+
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 50
+            }, 1500, 'easeInOutExpo');
+            /*
+            if you don't want to use the easing effects:
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1000);
+            */
+            event.preventDefault();
+        });
+    });
+</script>
+
+        <!-- scrollup button on the bottom right corner -->
+        <script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 800) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+        $('.scrollup, .navbar-brand').click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    });
+</script>
+
+        <!-- scroll spy url modification -->
+        <script>
+    $(window).on('activate.bs.scrollspy', function (e) {
+        var $anchor = $("a[href^='#']", e.target).attr("href");
+        if ($anchor == "#home") {
+            $anchor = window.location.pathname;
+        }
+        history.replaceState({}, "", $anchor);
+    });
+</script>
+
+        <!-- collapse navbar on mobile on click -->
+        <script>
+    $(function () {
+        var navMain = $("#bs-example-navbar-collapse-1");
+        navMain.on("click", "a", null, function () {
+            navMain.collapse('hide');
+        });
+    });
+</script>
+
+        <!-- reorder concert dates -->
+        <script>
+    $(document).ready(function () {
+        "use_strict";
+        var concerts = $(".concert").remove();
+        function el_to_timestamp(element) {
+            return new Date($(element).data("date")).valueOf()
+        }
+        concerts = concerts.sort(function (a, b) {
+            return el_to_timestamp(a) - el_to_timestamp(b);
+        });
+        // Concerts are considered "future" until the next day
+        var now = new Date().valueOf() - 1000 * 3600 * 24;
+
+        $.each(concerts, function () {
+            concert = $(this);
+            var concert_date = el_to_timestamp(this);
+            if (concert_date > now) {
+                $(".FutureEvents").append(concert);
+            }
+            else {
+                $(".PastEvents").prepend(concert);
+            }
+        })
+    });
+</script>
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="75">
+
+        <!-- PAGE HOME -->
+        <div id="home" class="pageOdd jumbotron masthead"
+            data-stellar-background-ratio="0.5" style="margin-bottom: 0px">
+            <!-- <div class="overlay"></div> -->
+
+            <div id="content">
+                
+                <div class="fdlm-song-content">
+                    <form>
+                        <input type="button" value="Retour à la liste" onclick="history.back()">
+                       </form>
+                    <h1>Animaniacs</h1>        
+                    <pre>
+Voici l’heure des Animaniacs
+On a disjoncté un max
+Soyez cool, soyez relax
+Sur le rire, pas de taxe
+On est les Animaniacs
+
+Nous c’est Yakko et Wakko
+Je suis Dot leur petite soeur
+Pour égayer le studio
+On a joué les agitateurs
+Comme ça n’a pas beaucoup plu
+Ils ont bouclé les Warners
+On s’est enfuis et nous voici
+Pour votre plus grand bonheur
+
+On est les Animaniacs
+Dot vous charme, Yakko s’éclaxe
+Wakko est super-voraxe
+et Bill Clinton joue du sax’
+On est les Animaniacs!
+                    </pre>
+ <form>
+                        <input type="button" value="Retour à la liste" onclick="history.back()">
+                       </form>          
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row-fluid">
+                    <p class="text-center">Copyright &copy; 2015-2021. Negitachi</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

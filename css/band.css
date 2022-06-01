@@ -425,3 +425,41 @@ div.concert {
   min-width: 200px;
   margin-bottom: 2em;
 }
+
+.fdlm-content {
+  margin: auto;
+  max-width: 800px;
+  background-color: white;
+}
+
+.fdlm-content li {
+  background-image: url(../images/portee.png);
+  height: 62px;
+  padding-left: 20px;
+  font-size: 30px;
+  padding-top: 12px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.fdlm-song-content {
+  background-color: white;
+  margin: auto;
+  padding: 10px 5px 10px 5px;
+  max-width: 800px;
+}
+
+.fdlm-song-content h1 {
+  max-width: 800px;
+  text-align: center;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+.fdlm-content li a {
+  color: rgb(50, 125, 73);
+}
