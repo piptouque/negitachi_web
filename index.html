@@ -180,6 +180,25 @@
       })
     });
   </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '747939605977973');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=747939605977973&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="75">
@@ -1054,6 +1073,10 @@
 <script type="text/javascript" src="https://cdn.rawgit.com/snaptortoise/konami-js/06c0c68099eae5417532d67c0549ad0ab0de8ae1/konami.js"></script>
 <script type="text/javascript">
     new Konami('https://www.youtube.com/watch?v=jdL-K9EgSwE');
+
+  document.getElementById('submitButton').addEventListener('click', function () {
+    fbq('track', 'Contact');
+  }, false);
 </script>
 </body>
 </html>
