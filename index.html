@@ -72,6 +72,9 @@
   <!-- other -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/fr.js"></script>
+  <script>dayjs.locale('fr')</script>
 
   <!-- enable flex slider -->
   <script type="text/javascript">
@@ -135,7 +138,7 @@
 
   <!-- scroll spy url modification -->
   <script>
-    $(window).on('activate.bs.scrollspy', function (e) {
+    $(window).on('activate.bs.scrollspy', function (e) { 
       var $anchor = $("a[href^='#']", e.target).attr("href");
       if ($anchor == "#home") {
         $anchor = window.location.pathname;
@@ -156,30 +159,37 @@
 
   <!-- reorder concert dates -->
   <script>
-    $(document).ready(function(){
-      "use_strict";
-      var concerts = $(".concert").remove();
-      function el_to_timestamp(element){
-        return new Date($(element).data("date")).valueOf()
-      }
-      concerts = concerts.sort(function(a, b){
-        return el_to_timestamp(a) - el_to_timestamp(b);
-      });
-      // Concerts are considered "future" until the next day
-      var now = new Date().valueOf() - 1000 * 3600 * 24;
+    function reorder_concert_dates() {
+    "use_strict";
+    var concerts = $(".concert").remove();
+    function el_to_timestamp(element) {
+      return new Date($(element).data("date")).valueOf()
+    }
+    concerts = concerts.sort(function (a, b) {
+      return el_to_timestamp(a) - el_to_timestamp(b);
+    });
+    // Concerts are considered "future" until the next day
+    var now = new Date().valueOf() - 1000 * 3600 * 24;
 
-      $.each(concerts, function(){
-        concert = $(this);
-        var concert_date = el_to_timestamp(this);
-        if (concert_date > now){
-          $(".FutureEvents").append(concert);
-        }
-        else {
-          $(".PastEvents").prepend(concert);
-        }
-      })
+    $.each(concerts, function () {
+      concert = $(this);
+      var concert_date = el_to_timestamp(this);
+      if (concert_date > now) {
+        $(".FutureEvents").append(concert);
+      }
+      else {
+        $(".PastEvents").prepend(concert);
+      }
+    })
+  }
+    $(document).ready(function(){
+      reorder_concert_dates()
+
+      // concerts = db.collections('concerts')
+      // console.log(concerts);
     });
   </script>
+
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -385,237 +395,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="concert" data-date="2021-12-16">
-      <div class="thumbnail">
-        <div class="caption">
-          <img src="images/renard_dore.png" alt="Renard Doré" style="width:100%"/>
-          <h3>Concert au Renard Doré</h3>
-          <p>
-            <b>16 décembre 2021 - 20h30</b><br>
-            RENARD DORÉ<br>
-            41 Rue Jussieu
-          </p>
-          <p class="text-center"><a href="https://www.facebook.com/lerenarddore/posts/3139226976360236" target="_blank" class="btn btn-med">Facebook</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="row-fluid EventsList FutureEvents">
-      <div class="concert" data-date="2022-04-10">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/concert-abadachoeur.jpg" alt="Abadachoeur" style="width:100%" />
-            <h3>Chorales et brunch ✺ Abadachoeur et les Negitachi</h3>
-            <p>
-              <b>10 avril 2022 - 15h00</b><br>
-              LES AMARRES<br>
-              24 Quai d'Austerlitz
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/720294489129528/" target="_blank"
-                class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-04-14">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/concert-abadachoeur.jpg" alt="Abadachoeur" style="width:100%" />
-            <h3>Abadachoeur et les Negitachi</h3>
-            <p>
-              <b>14 avril 2022 - 21h00</b><br>
-              Mairie du 14ème<br>
-              2 Pl. Ferdinand Brunot
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-05-7">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="https://parisfanfestival.com/wp-content/uploads/2022/02/Paris-Fan-Festival-Logo.svg"
-              alt="Paris Fan Festival" style="width:100%" />
-            <h3>Paris Fan Festival</h3>
-            <p>
-              <b>7 et 8 mai 2022</b><br>
-              Paris Event center<br>
-              20 Avenue de la Porte de la Villette
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/ParisFanFestival/posts/154843050277006" target="_blank"
-                class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-05-23">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/kiosques_2021.jpg" alt="Kiosques en fête" style="width:100%" />
-            <h3>Kiosques en fête</h3>
-            <p>
-              <b>23 mai 2022</b><br>
-              Kiosque du square Violet<br>
-              4 Place Violet
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-06-18">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/collab_yosakoi_taiko.jpg" alt="La Collab Yosakoi et Taiko" style="width:100%" />
-            <h3>Japon en scène - <br/>
-            La Collab Negi Yosakoi et Taiko</h3>
-            <p>
-              <b>18 juin 2022 - 16h</b><br />
-              Kiosque du parc de choisy<br />
-              Paris XIII
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/1240826966687697" target="_blank" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-06-21">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/FDLM_2022.jpg" alt="La Fête de la musique 2022" style="width:100%" />
-            <h3>Fête de la musique</h3>
-            <p>
-              <b>21 juin 2022 - 21h30</b><br/>
-              (POALE en 1ère partie à 20h)<br/>
-              Dernier bar avant la fin du monde<br />
-              19 Av. Victoria
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/1084328882247978" target="_blank" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-07-2">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/logo-big.png" alt="Negitachi la revanche" style="width:100%" />
-            <h3><span style="font-size: 150%;">Le</span> Grand concert Negitachi<br>Revenge of the Leek<br></h3>
-            <p>
-              <b>2 juillet 2022 - 19h30</b><br>
-              Espace Jean Dame<br>
-              17 Rue Léopold Bellan
-            </p>
-            <!-- <p class="text-center"><a href="https://www.facebook.com/events/512842513096414" target="_blank"
-                            class="btn btn-med">Facebook</a></p>-->
-                        <p class="text-center"><a
-                            href="https://www.helloasso.com/associations/negitachi/evenements/negitachi-revenge-of-the-leek"
-                            target="_blank" class="btn btn-med">Billetterie (Gratuit)</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-03-19">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/massy.png" alt="Médiathèque Massy" style="width:100%"/>
-            <h3>Concert à Massy</h3>
-            <p>
-              <b>19 mars 2022 - 16h</b><br>
-              Médiathèque de Massy<br>
-            </p>
-	    <p class="text-center"><a href="https://mediatheque.ville-massy.fr/Default/search.aspx?SC=DEFAULT&QUERY=chorale&QUERY_LABEL=&fbclid=IwAR2rFJnjo9DjeGpPWeEBKODjFC6tEMpZmrTxNrXACOUvbHV05CdiuzaZafA#/Detail/(query:(Id:'2',Index:3,NBResults:189,PageRange:3,SearchQuery:(FacetFilter:%7B%7D,ForceSearch:!f,InitialSearch:!f,Page:0,PageRange:3,QueryGuid:'42fad100-f9b1-4043-9224-e22b366d391c',QueryString:chorale,ResultSize:10,ScenarioCode:DEFAULT,ScenarioDisplayMode:display-standard,SearchGridFieldsShownOnResultsDTO:!(),SearchLabel:'',SearchTerms:chorale,SortField:!n,SortOrder:0,TemplateParams:(Scenario:'',Scope:Default,Size:!n,Source:'',Support:'',UseCompact:!f),UseSpellChecking:!n),TemplateParams:(Scenario:'',Scope:Default,Size:!n,Source:'',Support:'',UseCompact:!f)))" target="_blank" class="btn btn-med">Réservation</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-11-20">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/cergyplay.jpg" alt="CergyPlay" style="width:100%"/>
-            <h3>Cergyplay</h3>
-            <p>
-              <b>20 novembre 2021 - 16h</b><br>
-              Médiathèque de l'horloge<br/>
-              Cergy
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-09-25">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/kiosques_2021.jpg" alt="La Collab Yosakoi et Taiko" style="width:100%"/>
-            <h3>La Collab Yosakoi et Taiko</h3>
-            <p>
-              <b>22 Septembre 2021 - 14h30</b><br/>
-              Kiosque du parc de choisy<br/>
-              Paris XIII
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-06-29">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/negi-revanche.jpg" alt="Negitachi la revanche" style="width:100%"/>
-            <h3><span style="font-size: 150%;">Le</span> Grand concert Negitachi<br>La revanche<br></h3>
-            <p>
-              <b>29 Juin 2021 - 20h</b><br>
-              Espace Jean Dame<br>
-              Paris II
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/512842513096414" target="_blank" class="btn btn-med">Facebook</a></p>
-            <p class="text-center"><a href="https://www.helloasso.com/associations/negitachi/evenements/negitachi-le-concert-saison-11" target="_blank" class="btn btn-med">Billetterie (Gratuit)</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-07-05">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/kiosques_2021.jpg" alt="Kiosques en fête" style="width:100%"/>
-            <h3>Kiosques en fête</h3>
-            <p>
-              <b>5 Juillet 2021 - 20h</b><br>
-              Square Saint-Lambert<br>
-              Paris XV
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/1469710883361184" target="_blank" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-06-27">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/voix-sur-berges.jpg" alt="Voix sur Berges" style="width:100%"/>
-            <h3>Voix sur Berges</h3>
-            <p>
-              <b>27 Juin 2021</b><br/>
-              Negitachi - 14h<br>
-              Tamanegi - 15h40<br>
-              Quai de Valmy<br>
-              Paris X
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/events/2838499283131212" target="_blank" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2021-07-04">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/j-irai-créer-chez-vous.png" alt="J'irai créer chez vous" style="width:100%"/>
-            <h3>Les concerts suspendus</h3>
-            <p>
-              <b>4 Juillet 2021 - 17h30</b><br>
-              17 rue Eugène Varlin<br>
-              Paris X
-            </p>
-            <p class="text-center"><a href="https://www.facebook.com/109688467451658/posts/324143466006156/" target="_blank" class="btn btn-med">Facebook</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="concert" data-date="2022-01-22">
-        <div class="thumbnail">
-          <div class="caption">
-            <img src="images/OHBB_VIDEOGAMMES_2022.png" alt="Concert vidéo gammes" style="width:100%"/>
-            <h3>Concert VIDEO GAMMES</h3>
-            <p>
-              <b>22 Janvier 2022 - 18h30</b><br>
-              60 Rue de la Belle Feuille<br>
-              Boulogne-Billancourt
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="row-fluid EventsList FutureEvents">      
     <!-- N'efface pas le prochain div -->
     </div>
     <div class="col-md-12">
@@ -1078,5 +858,72 @@
     fbq('track', 'Contact');
   }, false);
 </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+  import { getFirestore, collection, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDUW6Wdr1bh5RpnFesoLy4jHBYpNdX11as",
+    authDomain: "negitachi-40a8c.firebaseapp.com",
+    projectId: "negitachi-40a8c",
+    storageBucket: "negitachi-40a8c.appspot.com",
+    messagingSenderId: "175993037819",
+    appId: "1:175993037819:web:89581ad52c50e442e1615e",
+    measurementId: "G-XVTH94PB6Y"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app);
+
+  console.log('plop')
+
+  const concertsRef = collection(db, "concerts");
+  const querySnapshot = await getDocs(concertsRef);
+  console.log('plop3')
+
+  console.log('okio')
+  console.log(querySnapshot)
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    var data = doc.data()
+    addConcert(data)
+  });
+  reorder_concert_dates()
+
+</script>
+
+<script>
+  function addConcert(data) {
+    // date, image_url, title, address_1, address_2, link_1, link_1_button, link_2, link_2_button
+    var date = dayjs(data.date)
+    var block = `<div class="concert" data-date="${date.format("YYYY-MM-DD")}"> <div class="thumbnail"> <div class="caption"> <img src="${data.image}" alt="" style="width:100%" /> <h3>${data.title}</h3> <p> <b>${date.format("D MMMM YYYY - HH[H]mm")}</b><br> ${data.address_1}`
+    if (data.address_2)
+      block += `<br> ${data.address_2}`
+    block += '</p>'  
+    if (data.link_1) {
+      block += `<p class="text-center"><a href="${data.link_1}" target="_blank" class="btn btn-med">${data.link_1_button}</a></p>`
+    }
+    if (data.link_2) {
+      block += `<p class="text-center"><a href="${data.link_2}" target="_blank" class="btn btn-med">${data.link_2_button}</a></p>`
+    }
+    block += '</div> </div> </div>'
+
+    $('#concerts').append(block)    
+  }
+</script>
+
+<script>
+  
+</script>
+
 </body>
 </html>
