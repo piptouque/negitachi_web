@@ -895,7 +895,7 @@ __:-.\|.'/_
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
-  import { getFirestore, collection, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
+  import { getFirestore, collection, query, where, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -918,7 +918,7 @@ __:-.\|.'/_
 
   console.log('plop')
 
-  const concertsRef = collection(db, "concerts");
+  const concertsRef = query(collection(db, "concerts"), where("visible", "==", true));
   const querySnapshot = await getDocs(concertsRef);
   console.log('plop3')
 
