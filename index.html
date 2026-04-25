@@ -274,8 +274,8 @@ __:-.\|.'/_
               </a>&nbsp;
             </li>
             <li class="social">
-              <a href="https://www.flickr.com/photos/negitachi" target="_blank">
-                <img alt="Flickr" src="images/flickr-icon.png" width="35" height="35"/>
+              <a href="https://www.instagram.com/negitachi" target="_blank">
+                <img alt="Instagram" src="images/instagram-icon.png" width="35" height="35"/>
               </a>&nbsp;
             </li>
             <li class="social">
@@ -377,7 +377,7 @@ __:-.\|.'/_
         <p class="lead">
           Nés en 2010 dans l'imaginaire d'une poignée de geeks mélomanes, nous, les Negitachi («&nbsp;les poireaux&nbsp;» en japonais), avons pour objectif de promouvoir
           la culture geek et otaku. Nous élargissons chaque année notre répertoire et les univers abordés, et comptons maintenant dans nos rangs une trentaine
-          de membres actifs qui font vivre l'association «&nbsp;Negitachi&nbsp;».
+          de membres qui font vivre l'association «&nbsp;Negitachi&nbsp;».
         </p>
       </div>
     </div>
@@ -451,25 +451,20 @@ __:-.\|.'/_
         <h3>Nos Vidéos</h3>
       </div>
     </div>
-    <div id="galleria_youtube"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-          Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.js');
-          var data = [
-            {
-              iframe: 'https://www.youtube.com/embed?listType=playlist&list=PLQHuhNI1Q8hwaHS-wns_cA3azuTBewYUM'
-            }
-          ];
-          $("#galleria_youtube").galleria({
-              height: .57,
-              showImagenav: false,
-              showCounter: false,
-              dataSource: data
-          });
-      });
-    </script>
+    <div class="channel-container">
+      <iframe
+        width="100%" height="500"
+        src="https://www.youtube.com/embed/videoseries?list=PLQHuhNI1Q8hwaHS-wns_cA3azuTBewYUM"
+        referrerpolicy="strict-origin-when-cross-origin"
+        title="Negitachi YouTube Channel Videos"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    </div>
+    <style>
+      .channel-container { position: relative; width: 100%; max-width: 1000px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+      .channel-container iframe { border-radius: 16px; }
+    </style>
     <center>
       <h3>Retrouvez-nous sur <a href="https://www.youtube.com/user/Negitachi" target="_blank">YouTube</a></h3>
     </center>
@@ -489,32 +484,23 @@ __:-.\|.'/_
     <div class="row-fluid" style="padding-bottom: 50px">
       <div class="col-md-12">
         <center>
-          <div id="flickr"></div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/galleria.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/plugins/flickr/galleria.flickr.min.js"></script>
-          <script type="text/javascript">
-            $(document).ready(function(){
-                Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.2/themes/classic/galleria.classic.js');
-                $("#flickr").galleria({
-                    responsive: true,
-                    height: .57,
-                    imageCrop: false,
-                    thumbCrop: 'height',
-                    carousel: false,
-                    showInfo: true,
-                    swipe: true,
-                    easing: 'galleriaOut',
-                    transition: 'pulse',
-                    flickr: 'set:72177720310446184',
-                    linkSourceImages: true,
-                    flickrOptions: {
-                      imageSize: 'original',
-                      description: true
-                    }
-                });
-            });
-          </script>
-          <h3>Toutes nos photos sur <a href="https://www.facebook.com/negitachi/photos_albums" target="_blank">Facebook</a></h3>
+          <div class="igwrapper">
+            <style>
+              .igwrapper{background:#fff;position:relative}
+              .igwrapper
+              iframe{border:0;position:relative;z-index:2}
+              .igwrapper
+              a{color:rgba(0,0,0,0);position:absolute;left:0;top:0;z-index:0}
+            </style>
+            <script async src="https://www.instagram.com/embed.js">
+            </script>
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/negitachi/"
+              data-instgrm-version="14"
+              style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%;width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            </blockquote>
+          </div>
+          <h3>Toutes nos photos sur <a href="https://www.instagram.com/negitachi/" target="_blank">Instagram</a> et <a href="https://www.facebook.com/negitachi/photos_albums" target="_blank">Facebook</a></h3>
         </center>
       </div>
     </div>
@@ -536,7 +522,7 @@ __:-.\|.'/_
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-6">
-              <center><h4>Les membres chantants</h4></center>
+              <center><h4>Les membres chantant·es</h4></center>
             </div>
           </div>
           <div class="col-md-4">
@@ -550,7 +536,7 @@ __:-.\|.'/_
               <li>Christelle K.</li>
             </ul>
             <strong>Altos</strong><br>
-            <ul>          
+            <ul>
               <li>Eve J.</li>          
               <li>Agnès G.</li>
               <li>Marie-Pierre G.</li>
@@ -585,11 +571,12 @@ __:-.\|.'/_
               <li>Isabel L.</li>
               <li>Quỳnh Lan D.</li>
               <li>Claire L.</li>
-              <li>Pierre T.</li>
+              <li>Baptiste G.</li>
+              <li>Pierre T.</li> 
             </ul>
             <center><h4>Les chefs de chœur</h4></center>
             <ul>
-              <li>Depuis 2016: Auto-direction (différents membres chantants)</li>
+              <li>Depuis 2016: Auto-direction (différents membres chantant·es)</li>
               <li>2015-2016: Steven T.</li>
               <li>2013-2015: Quỳnh Lan D.</li>
               <li>2012-2013: Vincent C. &amp; Quỳnh Lan D.</li>
@@ -603,7 +590,7 @@ __:-.\|.'/_
         </div>
       </div>
       <div class="col-md-4">
-        <center><h4>Les membres non-chantants</h4></center>
+        <center><h4>Les membres non-chantant·es</h4></center>
         <ul>
           <li>Adam K.</li>
           <li>Amaury L.</li>
@@ -635,7 +622,7 @@ __:-.\|.'/_
           <li>Isabel L.</li>
           <li>Quỳnh Lan D.</li>
         </ul>
-        <center><h4>Les anciens <a onclick="$('.anciens').toggleClass('hidden');"><span class='anciens'>&#10164;</span><span class='anciens hidden'>&#10166;</span></a></h4></center>
+        <center><h4>Les ancien·nes membres <a onclick="$('.anciens').toggleClass('hidden');"><span class='anciens'>&#10164;</span><span class='anciens hidden'>&#10166;</span></a></h4></center>
         <div class="row anciens hidden">
           <div class="col-md-6">
             <ul>
@@ -681,6 +668,7 @@ __:-.\|.'/_
               <li>Mériadec L.</li>
               <li>Michaël G.</li>
               <li>Muriel M.</li>
+              <li>Moko Nigiri</li>
               <li>Orion M.</li>
               <li>Pascale M.</li>
               <li>Quentin S.</li>
@@ -715,20 +703,20 @@ __:-.\|.'/_
       </div>
       <div class="col-md-8" style="padding: 10px">
         <p class="lead">
-          Le recrutement des chantants pour la saison 2025/2026 aura lieu durant tout l'été 2025.<br/>
-          Le recrutement des non-chantants a lieu toute l'année.<br/>
-          Prenez contact avec nous dès maintenant pour plus d'information et être tenus informés.
+          Le recrutement des chantant·es pour la saison suivante a lieu durant tout l'été.<br/>
+          Le recrutement des non-chantant·es a lieu toute l'année.<br/>
+          Prenez contact avec nous dès maintenant pour plus d'information et être tenus informé·es !
         </p>
         <br/>
         <p class="lead">
             <b>Infos pratiques :</b><br/>
             Les répétitions ont lieu tous les lundis de 19h à 21h<br/>
-            La salle de répétition se trouve à Paris aux alentours de la station Charles de Gaulle-Étoile
+            La salle de répétition se trouve à Paris aux alentours de la station Charles de Gaulle-Étoile.
         </p>
       </div>
     </div>
     <center>
-      <h3>Pour nous rejoindre, utilisez le formulaire de contact ci-dessous ou envoyez-nous un mail à contact arobase negitachi.fr</h3>
+      <h3>Pour nous rejoindre, utilisez le formulaire de contact ci-dessous ou envoyez-nous un mail à <a href="mailto:contact@negitachi.fr">contact@negitachi.fr</a>.</h3>
     </center>
   </div>
 </div>
@@ -768,7 +756,7 @@ __:-.\|.'/_
     <br/>
 	<br/>
 	<center>
-      <h3>Si vous êtes journaliste ou blogueur(se), n'hésitez pas à nous contacter !</h3>
+      <h3>Si vous êtes journaliste ou blogueur·se, n'hésitez pas à nous contacter !</h3>
     </center>
   </div>
 </div>
@@ -808,7 +796,7 @@ __:-.\|.'/_
       </div>
     </div>
     <center>
-      <h3>Ou envoyez-nous un mail à contact arobase negitachi.fr</h3>
+      <h3>Ou envoyez-nous un mail à <a href="mailto:contact@negitachi.fr">contact@negitachi.fr</a>.</h3>
 	  <br/><br/><br/>
 	  <h3>Vous pouvez également aider la vie associative en faisant un don sur <a href="https://www.helloasso.com/associations/negitachi" target="_blank">Hello Asso</a>.<br/>
 	  Un justificatif fiscal vous sera transmis en fin d'année ouvrant droit à une réduction d'impôt.
@@ -853,7 +841,7 @@ __:-.\|.'/_
 <div class="footer" id="footer">
   <div class="container">
     <div class="row-fluid">
-      <p class="text-center">Copyright &copy; 2015-2025. Negitachi</p>
+      <p class="text-center">Copyright &copy; 2015-2026. Negitachi</p>
     </div>
   </div>
 </div>
